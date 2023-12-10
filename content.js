@@ -1,5 +1,3 @@
-console.log('実行中です。');
-
 function handleKeydownEvent(event) {
     if (event.key === 'c') {
         // 入力要素から帰属テキストを取得
@@ -28,8 +26,7 @@ function handleKeydownEvent(event) {
     }
 }
 
-function register() {
-    var downloadButton = document.querySelector('.mw-mmv-download-button');
+function register(downloadButton) {
     if (downloadButton) {
         // 要素のクリックイベントを発火させる
         downloadButton.click();
@@ -48,9 +45,9 @@ function unregister() {
 
 function observeDOMChanges() {
     const observer = new MutationObserver(mutations => {
-        if (document.querySelector('.mw-mmv-download-button')) {
-            console.log('マッチ！');
-            register();
+        var downloadButton = document.querySelector('.mw-mmv-download-button');
+        if (downloadButton) {
+            register(downloadButton);
         } else {
             unregister();
         }
@@ -60,12 +57,9 @@ function observeDOMChanges() {
 
 function startExtension() {
     var downloadButton = document.querySelector('.mw-mmv-download-button');
-    console.log(downloadButton);
     if (downloadButton) {
-        register();
-        console.log('1');
+        register(downloadButton);
     }
-    console.log('2');
     observeDOMChanges();
 }
 

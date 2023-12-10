@@ -1,17 +1,11 @@
 {
-    "manifest_version": 3,
+    "manifest_version": 2,
     "name": "Attribution Copy",
     "version": "1.0",
     "permissions": [
         "activeTab",
         "clipboardWrite"
     ],
-    "host_permissions": [
-        "*://*.wikipedia.org/*"
-    ],
-    "background": {
-        "service_worker": "background.js"
-    },
     "content_scripts": [
         {
             "matches": [
