@@ -24,6 +24,7 @@ function copyAttributionText() {
 function clickDetailsButton() {
     var detailsButton = document.querySelector('.mw-mmv-description-page-button');
     if (detailsButton) {
+        detailsButton.target = '_blank';
         detailsButton.click();
     } else {
         console.log('詳細ボタンが見つかりませんでした。');
