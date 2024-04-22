@@ -1,9 +1,11 @@
 function handleKeydownEvent(event) {
     switch (event.key) {
         case 'c':
+        case ',':
             copyAttributionText();
             break;
         case 'd':
+        case 'k':
             clickDetailsButton();
             break;
     }
