@@ -1,7 +1,7 @@
 {
     "manifest_version": 2,
     "name": "Attribution Copy",
-    "version": "1.4",
+    "version": "1.5",
     "permissions": [
         "activeTab",
         "clipboardWrite"

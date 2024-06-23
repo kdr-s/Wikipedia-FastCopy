@@ -13,7 +13,7 @@ function handleKeydownEvent(event) {
 
 function copyAttributionText() {
     // var attributionInput = document.getElementById('ooui-2');
-    var attributionInput = document.getElementsByClassName ('cdx-text-input__input')[1];
+    var attributionInput = [...document.getElementsByClassName('cdx-text-input__input')].pop();
     var attributionText = attributionInput ? attributionInput.value : '';
     var combinedText = "出典：" + attributionText;
 
